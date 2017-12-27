@@ -34,3 +34,5 @@ map <C-n> :NERDTreeToggle<CR>
 "Show hidden files in NERDTree
 let NERDTreeShowHidden=1
 
+nnoremap <leader>g :Grepper -tool ack<cr>
+
