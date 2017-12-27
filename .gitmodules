@@ -7,3 +7,6 @@
 [submodule "bundle/vim-grepper"]
 	path = bundle/vim-grepper
 	url = https://github.com/mhinz/vim-grepper.git
+[submodule "bundle/vim-tmux-navigator"]
+	path = bundle/vim-tmux-navigator
+	url = https://github.com/christoomey/vim-tmux-navigator.git
