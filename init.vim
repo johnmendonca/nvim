@@ -22,6 +22,13 @@ set wildignore+=*\\tmp\\*,*.swp,*.swo,*.zip,.git,.cabal-sandbox
 set wildmode=longest,list,full
 set wildmenu
 
+colo darkblue
+hi Keyword ctermfg=darkcyan
+hi Constant ctermfg=5*
+hi Comment ctermfg=2*
+hi Normal ctermbg=none
+hi LineNr ctermfg=darkgrey
+
 execute pathogen#infect()
 
 "Open NERDTree when nvim starts
@@ -34,5 +41,6 @@ map <C-n> :NERDTreeToggle<CR>
 "Show hidden files in NERDTree
 let NERDTreeShowHidden=1
 
+"Use Grepper with Ack
 nnoremap <leader>g :Grepper -tool ack<cr>
 
