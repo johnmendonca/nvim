@@ -58,3 +58,14 @@ let g:haskell_indent_guard = 2
 let g:haskell_indent_case_alternative = 1
 let g:cabal_indent_section = 2
 
+call neomake#configure#automake('w')
+let g:neomake_open_list = 2
+
+au FileType haskell nmap <leader>a :GhcModTypeInsert<CR>
+au FileType haskell nmap <leader>c :GhcModSplitFunCase<CR>
+au FileType haskell nmap <leader>t :GhcModType<CR>
+au FileType haskell nmap <leader>y :GhcModTypeClear<CR>
+au FileType haskell nmap <leader>s :GhcModSigCodegen<CR>
+
+au FileType haskell nmap <leader>h :HdevtoolsType<CR>
+au FileType haskell nmap <leader>j :HdevtoolsClear<CR>
