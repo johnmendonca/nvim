@@ -28,3 +28,12 @@
 [submodule "bundle/intero-neovim"]
 	path = bundle/intero-neovim
 	url = https://github.com/parsonsmatt/intero-neovim.git
+[submodule "bundle/vim-hsimport"]
+	path = bundle/vim-hsimport
+	url = https://github.com/dan-t/vim-hsimport.git
+[submodule "bundle/vim-hindent"]
+	path = bundle/vim-hindent
+	url = https://github.com/alx741/vim-hindent.git
+[submodule "bundle/vim-stylishask"]
+	path = bundle/vim-stylishask
+	url = https://github.com/alx741/vim-stylishask.git

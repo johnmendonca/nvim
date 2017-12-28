@@ -84,7 +84,7 @@ au FileType haskell nnoremap <silent> <leader>ne :InteroEval<CR>
 au FileType haskell nnoremap <silent> <leader>ns :InteroStart<CR>
 au FileType haskell nnoremap <silent> <leader>nk :InteroKill<CR>
 
-" Ctrl-{hjkl} for navigating terminal panes
+" Ctrl-{hjkl} for navigating out of terminal panes
 tnoremap <C-h> <C-\><C-n><C-w>h
 tnoremap <C-j> <C-\><C-n><C-w>j
 tnoremap <C-k> <C-\><C-n><C-w>k
@@ -96,4 +96,10 @@ let g:neomake_haskell_enabled_makers = []
 
 au FileType haskell nmap <leader>c :GhcModSplitFunCase<CR>
 au FileType haskell nmap <leader>s :GhcModSigCodegen<CR>
+
+au FileType haskell nnoremap <silent> <leader>i :HsimportSymbol<CR>
+au FileType haskell nnoremap <silent> <leader>m :HsimportModule<CR>
+
+au FileType haskell nnoremap <silent> <leader>ps :Stylishask<CR>
+au FileType haskell nnoremap <silent> <leader>ph :Hindent<CR>
 
