@@ -58,22 +58,42 @@ let g:haskell_indent_guard = 2
 let g:haskell_indent_case_alternative = 1
 let g:cabal_indent_section = 2
 
+" Automatically reload on save
+au BufWritePost *.hs InteroReload
+
+" Lookup the type of expression under the cursor
+au FileType haskell nmap <silent> <leader>t <Plug>InteroGenericType
+au FileType haskell nmap <silent> <leader>T <Plug>InteroType
+" Insert type declaration
+au FileType haskell nnoremap <silent> <leader>nt :InteroTypeInsert<CR>
+" Show info about expression or type under the cursor
+au FileType haskell nnoremap <silent> <leader>ni :InteroInfo<CR>
+
+" Open/Close the Intero terminal window
+au FileType haskell nnoremap <silent> <leader>nn :InteroOpen<CR>
+au FileType haskell nnoremap <silent> <leader>nh :InteroHide<CR>
+
+" Reload the current file into REPL
+au FileType haskell nnoremap <silent> <leader>nf :InteroLoadCurrentFile<CR>
+" Jump to the definition of an identifier
+au FileType haskell nnoremap <silent> <leader>ng :InteroGoToDef<CR>
+" Evaluate an expression in REPL
+au FileType haskell nnoremap <silent> <leader>ne :InteroEval<CR>
+
+" Start/Stop Intero
+au FileType haskell nnoremap <silent> <leader>ns :InteroStart<CR>
+au FileType haskell nnoremap <silent> <leader>nk :InteroKill<CR>
+
+" Ctrl-{hjkl} for navigating terminal panes
+tnoremap <C-h> <C-\><C-n><C-w>h
+tnoremap <C-j> <C-\><C-n><C-w>j
+tnoremap <C-k> <C-\><C-n><C-w>k
+tnoremap <C-l> <C-\><C-n><C-w>l
+
 call neomake#configure#automake('w')
 let g:neomake_open_list = 2
 let g:neomake_haskell_enabled_makers = []
 
 au FileType haskell nmap <leader>c :GhcModSplitFunCase<CR>
 au FileType haskell nmap <leader>s :GhcModSigCodegen<CR>
-au FileType haskell nmap <silent> <leader>t <Plug>InteroGenericType
-au FileType haskell nmap <silent> <leader>T <Plug>InteroType
 
-au BufWritePost *.hs InteroReload
-au FileType haskell nnoremap <silent> <leader>ns :InteroStart<CR>
-au FileType haskell nnoremap <silent> <leader>nk :InteroKill<CR>
-au FileType haskell nnoremap <silent> <leader>nn :InteroOpen<CR>
-au FileType haskell nnoremap <silent> <leader>nh :InteroHide<CR>
-au FileType haskell nnoremap <silent> <leader>nf :InteroLoadCurrentFile<CR>
-au FileType haskell nnoremap <silent> <leader>nt :InteroTypeInsert<CR>
-au FileType haskell nnoremap <silent> <leader>ng :InteroGoToDef<CR>
-au FileType haskell nnoremap <silent> <leader>ne :InteroEval<CR>
-au FileType haskell nnoremap <silent> <leader>ni :InteroInfo<CR>
