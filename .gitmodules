@@ -25,9 +25,6 @@
 [submodule "bundle/vimproc.vim"]
 	path = bundle/vimproc.vim
 	url = https://github.com/Shougo/vimproc.vim.git
-[submodule "bundle/vim-hdevtools"]
-	path = bundle/vim-hdevtools
-	url = https://github.com/bitc/vim-hdevtools.git
 [submodule "bundle/intero-neovim"]
 	path = bundle/intero-neovim
 	url = https://github.com/parsonsmatt/intero-neovim.git
