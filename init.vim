@@ -12,15 +12,7 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 set background=dark
-"set term=xterm-256color
 set laststatus=0
-
-set completeopt=menuone,menu,longest
-set completeopt+=longest
-
-set wildignore+=*\\tmp\\*,*.swp,*.swo,*.zip,.git,.cabal-sandbox
-set wildmode=longest,list,full
-set wildmenu
 
 colo darkblue
 hi Keyword ctermfg=darkcyan
@@ -100,6 +92,24 @@ au FileType haskell nmap <leader>s :GhcModSigCodegen<CR>
 au FileType haskell nnoremap <silent> <leader>i :HsimportSymbol<CR>
 au FileType haskell nnoremap <silent> <leader>m :HsimportModule<CR>
 
-au FileType haskell nnoremap <silent> <leader>ps :Stylishask<CR>
+let g:hindent_on_save = 0
 au FileType haskell nnoremap <silent> <leader>ph :Hindent<CR>
+
+let g:stylishask_on_save = 0
+au FileType haskell nnoremap <silent> <leader>ps :Stylishask<CR>
+
+let g:SuperTabDefaultCompletionType = '<c-x><c-o>'
+
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
+
+" Supertab
+let g:SuperTabDefaultCompletionType = '<c-x><c-o>'
+
+" Disable haskell-vim omnifunc
+let g:haskellmode_completion_ghc = 0
+
+" neco-ghc
+autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc 
+let g:necoghc_enable_detailed_browse = 1
 
