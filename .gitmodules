@@ -49,3 +49,6 @@
 [submodule "bundle/deoplete-emoji"]
 	path = bundle/deoplete-emoji
 	url = https://github.com/fszymanski/deoplete-emoji.git
+[submodule "bundle/tabular"]
+	path = bundle/tabular
+	url = https://github.com/godlygeek/tabular.git

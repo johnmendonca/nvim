@@ -113,3 +113,6 @@ let g:haskellmode_completion_ghc = 0
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc 
 let g:necoghc_enable_detailed_browse = 1
 
+" Tabular
+nnoremap <leader>= :Tabularize /=<CR>
+nnoremap <leader>- :Tabularize /-><CR>
