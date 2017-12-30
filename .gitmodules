@@ -46,3 +46,6 @@
 [submodule "bundle/neco-ghc"]
 	path = bundle/neco-ghc
 	url = https://github.com/eagletmt/neco-ghc
+[submodule "bundle/deoplete-emoji"]
+	path = bundle/deoplete-emoji
+	url = https://github.com/fszymanski/deoplete-emoji.git
