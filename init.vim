@@ -36,6 +36,9 @@ let NERDTreeShowHidden=1
 "Use Grepper with Ack
 nnoremap <leader>g :Grepper -tool ack<cr>
 
+"Hack for neovim and vim-tmux-navigator
+nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
+
 "haskell-vim settings
 let g:haskell_classic_highlighting = 1
 let g:haskell_indent_if = 3
