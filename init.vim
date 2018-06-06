@@ -34,7 +34,8 @@ map <C-n> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 
 "Use Grepper with Ack
-nnoremap <leader>g :Grepper -tool ack<cr>
+nnoremap <leader>ga :Grepper<cr>
+nnoremap <leader>gb :Grepper -buffer<cr>
 
 "Hack for neovim and vim-tmux-navigator
 nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
