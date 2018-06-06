@@ -63,7 +63,7 @@ au FileType haskell nmap <silent> <leader>T <Plug>InteroType
 " Insert type declaration
 au FileType haskell nnoremap <silent> <leader>nt :InteroTypeInsert<CR>
 " Show info about expression or type under the cursor
-au FileType haskell nnoremap <silent> <leader>ni :InteroInfo<CR>
+au FileType haskell nnoremap <silent> <leader>i :InteroInfo<CR>
 
 " Open/Close the Intero terminal window
 au FileType haskell nnoremap <silent> <leader>nn :InteroOpen<CR>
@@ -93,8 +93,8 @@ let g:neomake_haskell_enabled_makers = []
 au FileType haskell nmap <leader>c :GhcModSplitFunCase<CR>
 au FileType haskell nmap <leader>s :GhcModSigCodegen<CR>
 
-au FileType haskell nnoremap <silent> <leader>i :HsimportSymbol<CR>
-au FileType haskell nnoremap <silent> <leader>m :HsimportModule<CR>
+au FileType haskell nnoremap <silent> <leader>ims :HsimportSymbol<CR>
+au FileType haskell nnoremap <silent> <leader>imm :HsimportModule<CR>
 
 let g:hindent_on_save = 0
 au FileType haskell nnoremap <silent> <leader>ph :Hindent<CR>
