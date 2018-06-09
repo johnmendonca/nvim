@@ -90,9 +90,10 @@ call neomake#configure#automake('w')
 let g:neomake_open_list = 2
 let g:neomake_haskell_enabled_makers = []
 
-au FileType haskell nmap <leader>c :GhcModSplitFunCase<CR>
-au FileType haskell nmap <leader>s :GhcModSigCodegen<CR>
+au FileType haskell nmap <leader>mc :GhcModSplitFunCase<CR>
+au FileType haskell nmap <leader>ms :GhcModSigCodegen<CR>
 
+" Does not work for latest GHC, until hdevtools is updated
 au FileType haskell nnoremap <silent> <leader>ims :HsimportSymbol<CR>
 au FileType haskell nnoremap <silent> <leader>imm :HsimportModule<CR>
 
@@ -120,3 +121,8 @@ let g:necoghc_enable_detailed_browse = 1
 " Tabular
 nnoremap <leader>= :Tabularize /=<CR>
 nnoremap <leader>- :Tabularize /-><CR>
+nnoremap <leader>, :Tabularize /,<CR>
+
+" Replace all instances of word under the cursor
+nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
+
