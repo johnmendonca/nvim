@@ -80,6 +80,9 @@ au FileType haskell nnoremap <silent> <leader>ne :InteroEval<CR>
 au FileType haskell nnoremap <silent> <leader>ns :InteroStart<CR>
 au FileType haskell nnoremap <silent> <leader>nk :InteroKill<CR>
 
+" Reboot Intero, for when dependencies are added
+au FileType haskell nnoremap <silent> <leader>nr :InteroKill<CR> :InteroOpen<CR>
+
 " Ctrl-{hjkl} for navigating out of terminal panes
 tnoremap <C-h> <C-\><C-n><C-w>h
 tnoremap <C-j> <C-\><C-n><C-w>j
