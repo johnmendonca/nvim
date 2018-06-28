@@ -61,7 +61,7 @@ au BufWritePost *.hs InteroReload
 au FileType haskell nmap <silent> <leader>t <Plug>InteroGenericType
 au FileType haskell nmap <silent> <leader>T <Plug>InteroType
 " Insert type declaration
-au FileType haskell nnoremap <silent> <leader>nt :InteroTypeInsert<CR>
+au FileType haskell nnoremap <silent> <leader>ni :InteroTypeInsert<CR>
 " Show info about expression or type under the cursor
 au FileType haskell nnoremap <silent> <leader>i :InteroInfo<CR>
 
@@ -82,6 +82,10 @@ au FileType haskell nnoremap <silent> <leader>nk :InteroKill<CR>
 
 " Reboot Intero, for when dependencies are added
 au FileType haskell nnoremap <silent> <leader>nr :InteroKill<CR> :InteroOpen<CR>
+
+" Managing targets
+" Prompts you to enter targets (no silent):
+au FileType haskell nnoremap <leader>nt :InteroSetTargets<SPACE>
 
 " Ctrl-{hjkl} for navigating out of terminal panes
 tnoremap <C-h> <C-\><C-n><C-w>h
