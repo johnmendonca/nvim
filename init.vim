@@ -87,6 +87,9 @@ au FileType haskell nnoremap <silent> <leader>nr :InteroKill<CR> :InteroOpen<CR>
 " Prompts you to enter targets (no silent):
 au FileType haskell nnoremap <leader>nt :InteroSetTargets<SPACE>
 
+" Run the spec in the current file 
+au FileType haskell nnoremap <silent> <leader>nb :InteroSend hspec spec<CR>
+
 " Ctrl-{hjkl} for navigating out of terminal panes
 tnoremap <C-h> <C-\><C-n><C-w>h
 tnoremap <C-j> <C-\><C-n><C-w>j
