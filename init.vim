@@ -85,7 +85,7 @@ au FileType haskell nnoremap <silent> <leader>nr :InteroKill<CR> :InteroOpen<CR>
 
 " Managing targets
 " Prompts you to enter targets (no silent):
-au FileType haskell nnoremap <leader>nt :InteroSetTargets<SPACE>
+au FileType haskell nnoremap <leader>nt :InteroSetTargets<CR>
 
 " Run the spec in the current file 
 au FileType haskell nnoremap <silent> <leader>nb :InteroSend hspec spec<CR>
