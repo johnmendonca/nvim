@@ -113,7 +113,8 @@ au FileType haskell nnoremap <silent> <leader>ps :Stylishask<CR>
 let g:SuperTabDefaultCompletionType = '<c-x><c-o>'
 
 " Use deoplete.
-let g:deoplete#enable_at_startup = 1
+" turning off for now due to failures
+let g:deoplete#enable_at_startup = 0
 
 " Supertab
 let g:SuperTabDefaultCompletionType = '<c-x><c-o>'
