@@ -5,10 +5,16 @@ This setup assumes you are using the Haskell build tool Stack.
 To install this configuration including plugins:
 
 ```
+git clone --recursive https://github.com/johnmendonca/nvim.git ~/.config/nvim
+```
+
+As a note to myself, the SSH version:
+
+```
 git clone --recursive git@github.com:johnmendonca/nvim.git ~/.config/nvim
 ```
 
-Later you can update plugins:
+Later on you can update plugins:
 
 ```
 cd ~/.config/nvim

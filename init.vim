@@ -33,7 +33,7 @@ map <C-n> :NERDTreeToggle<CR>
 "Show hidden files in NERDTree
 let NERDTreeShowHidden=1
 
-"Use Grepper with Ack
+"Use Grepper
 nnoremap <leader>ga :Grepper<cr>
 nnoremap <leader>gb :Grepper -buffer<cr>
 
