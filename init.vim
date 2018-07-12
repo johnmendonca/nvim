@@ -131,6 +131,7 @@ let g:necoghc_enable_detailed_browse = 1
 " Tabular
 nnoremap <leader>= :Tabularize /=<CR>
 nnoremap <leader>- :Tabularize /-><CR>
+nnoremap <leader>< :Tabularize /<-<CR>
 nnoremap <leader>, :Tabularize /,<CR>
 nnoremap <leader># :Tabularize /#-}<CR>
 
