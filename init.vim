@@ -90,13 +90,16 @@ au FileType haskell nnoremap <leader>nt :InteroSetTargets<CR>
 " Run the spec in the current file 
 au FileType haskell nnoremap <silent> <leader>nb :InteroSend hspec spec<CR>
 
+" Intero starts automatically. Set this if you'd like to prevent that.
+let g:intero_start_immediately = 0
+
 " Ctrl-{hjkl} for navigating out of terminal panes
 tnoremap <C-h> <C-\><C-n><C-w>h
 tnoremap <C-j> <C-\><C-n><C-w>j
 tnoremap <C-k> <C-\><C-n><C-w>k
 tnoremap <C-l> <C-\><C-n><C-w>l
 
-call neomake#configure#automake('w')
+"call neomake#configure#automake('w')
 let g:neomake_open_list = 2
 let g:neomake_haskell_enabled_makers = []
 
@@ -104,8 +107,8 @@ au FileType haskell nmap <leader>mc :GhcModSplitFunCase<CR>
 au FileType haskell nmap <leader>ms :GhcModSigCodegen<CR>
 
 " Does not work for latest GHC, until hdevtools is updated
-au FileType haskell nnoremap <silent> <leader>ims :HsimportSymbol<CR>
-au FileType haskell nnoremap <silent> <leader>imm :HsimportModule<CR>
+"au FileType haskell nnoremap <silent> <leader>ims :HsimportSymbol<CR>
+"au FileType haskell nnoremap <silent> <leader>imm :HsimportModule<CR>
 
 let g:hindent_on_save = 0
 au FileType haskell nnoremap <silent> <leader>ph :Hindent<CR>
@@ -134,7 +137,21 @@ nnoremap <leader>- :Tabularize /-><CR>
 nnoremap <leader>< :Tabularize /<-<CR>
 nnoremap <leader>, :Tabularize /,<CR>
 nnoremap <leader># :Tabularize /#-}<CR>
+nnoremap <leader>: :Tabularize /::<CR>
 
 " Replace all instances of word under the cursor
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
 
+au FileType purescript nm <buffer> <silent> <leader>L :Plist<CR>
+au FileType purescript nm <buffer> <silent> <leader>l :Pload!<CR>
+au FileType purescript nm <buffer> <silent> <leader>r :Prebuild!<CR>
+au FileType purescript nm <buffer> <silent> <leader>f :PaddClause<CR>
+au FileType purescript nm <buffer> <silent> <leader>mt :PaddType<CR>
+au FileType purescript nm <buffer> <silent> <leader>a :Papply<CR>
+au FileType purescript nm <buffer> <silent> <leader>A :Papply!<CR>
+au FileType purescript nm <buffer> <silent> <leader>C :Pcase!<CR>
+au FileType purescript nm <buffer> <silent> <leader>i :Pimport<CR>
+au FileType purescript nm <buffer> <silent> <leader>qa :PaddImportQualifications<CR>
+au FileType purescript nm <buffer> <silent> <leader>g :Pgoto<CR>
+au FileType purescript nm <buffer> <silent> <leader>p :Pursuit<CR>
+au FileType purescript nm <buffer> <silent> <leader>t :Ptype<CR>
