@@ -138,6 +138,7 @@ nnoremap <leader>< :Tabularize /<-<CR>
 nnoremap <leader>, :Tabularize /,<CR>
 nnoremap <leader># :Tabularize /#-}<CR>
 nnoremap <leader>: :Tabularize /::<CR>
+nnoremap <leader>[ :Tabularize /[<CR>
 
 " Replace all instances of word under the cursor
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
