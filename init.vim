@@ -103,9 +103,6 @@ tnoremap <C-l> <C-\><C-n><C-w>l
 let g:neomake_open_list = 2
 let g:neomake_haskell_enabled_makers = []
 
-au FileType haskell nmap <leader>mc :GhcModSplitFunCase<CR>
-au FileType haskell nmap <leader>ms :GhcModSigCodegen<CR>
-
 " Does not work for latest GHC, until hdevtools is updated
 "au FileType haskell nnoremap <silent> <leader>ims :HsimportSymbol<CR>
 "au FileType haskell nnoremap <silent> <leader>imm :HsimportModule<CR>
@@ -118,18 +115,8 @@ au FileType haskell nnoremap <silent> <leader>ps :Stylishask<CR>
 
 let g:SuperTabDefaultCompletionType = '<c-x><c-o>'
 
-" Use deoplete.
-let g:deoplete#enable_at_startup = 1
-
 " Supertab
 let g:SuperTabDefaultCompletionType = '<c-x><c-o>'
-
-" Disable haskell-vim omnifunc
-let g:haskellmode_completion_ghc = 0
-
-" neco-ghc
-autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc 
-let g:necoghc_enable_detailed_browse = 1
 
 " Tabular
 nnoremap <leader>= :Tabularize /=<CR>

@@ -19,12 +19,6 @@
 [submodule "bundle/neomake"]
 	path = bundle/neomake
 	url = https://github.com/neomake/neomake.git
-[submodule "bundle/ghcmod-vim"]
-	path = bundle/ghcmod-vim
-	url = https://github.com/eagletmt/ghcmod-vim.git
-[submodule "bundle/vimproc.vim"]
-	path = bundle/vimproc.vim
-	url = https://github.com/Shougo/vimproc.vim.git
 [submodule "bundle/intero-neovim"]
 	path = bundle/intero-neovim
 	url = https://github.com/parsonsmatt/intero-neovim.git
@@ -37,18 +31,9 @@
 [submodule "bundle/vim-stylishask"]
 	path = bundle/vim-stylishask
 	url = https://github.com/alx741/vim-stylishask.git
-[submodule "bundle/deoplete.nvim"]
-	path = bundle/deoplete.nvim
-	url = https://github.com/Shougo/deoplete.nvim.git
 [submodule "bundle/supertab"]
 	path = bundle/supertab
 	url = https://github.com/ervandew/supertab.git
-[submodule "bundle/neco-ghc"]
-	path = bundle/neco-ghc
-	url = https://github.com/eagletmt/neco-ghc
-[submodule "bundle/deoplete-emoji"]
-	path = bundle/deoplete-emoji
-	url = https://github.com/fszymanski/deoplete-emoji.git
 [submodule "bundle/tabular"]
 	path = bundle/tabular
 	url = https://github.com/godlygeek/tabular.git
