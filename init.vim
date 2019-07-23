@@ -103,9 +103,8 @@ tnoremap <C-l> <C-\><C-n><C-w>l
 let g:neomake_open_list = 2
 let g:neomake_haskell_enabled_makers = []
 
-" Does not work for latest GHC, until hdevtools is updated
-"au FileType haskell nnoremap <silent> <leader>ims :HsimportSymbol<CR>
-"au FileType haskell nnoremap <silent> <leader>imm :HsimportModule<CR>
+au FileType haskell nnoremap <silent> <leader>ims :HsimportSymbol<CR>
+au FileType haskell nnoremap <silent> <leader>imm :HsimportModule<CR>
 
 let g:hindent_on_save = 0
 au FileType haskell nnoremap <silent> <leader>ph :Hindent<CR>
