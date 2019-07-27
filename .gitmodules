@@ -19,9 +19,6 @@
 [submodule "bundle/neomake"]
 	path = bundle/neomake
 	url = https://github.com/neomake/neomake.git
-[submodule "bundle/intero-neovim"]
-	path = bundle/intero-neovim
-	url = https://github.com/parsonsmatt/intero-neovim.git
 [submodule "bundle/vim-hsimport"]
 	path = bundle/vim-hsimport
 	url = https://github.com/dan-t/vim-hsimport.git
