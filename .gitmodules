@@ -46,3 +46,6 @@
 [submodule "bundle/psc-ide-vim"]
 	path = bundle/psc-ide-vim
 	url = https://github.com/FrigoEU/psc-ide-vim.git
+[submodule "bundle/intero-neovim"]
+	path = bundle/intero-neovim
+	url = git@github.com:johnmendonca/intero-neovim.git
