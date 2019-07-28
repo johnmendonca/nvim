@@ -122,8 +122,6 @@ au FileType haskell nnoremap <silent> <leader>ph :Hindent<CR>
 let g:stylishask_on_save = 0
 au FileType haskell nnoremap <silent> <leader>ps :Stylishask<CR>
 
-let g:SuperTabDefaultCompletionType = '<c-x><c-o>'
-
 " Supertab
 let g:SuperTabDefaultCompletionType = '<c-x><c-o>'
 
