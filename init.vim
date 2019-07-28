@@ -54,12 +54,25 @@ let g:haskell_indent_guard = 2
 let g:haskell_indent_case_alternative = 1
 let g:cabal_indent_section = 2
 
+let g:intero_backend = { 'command': 'stack ghci' }
+
 " Automatically reload on save
 au BufWritePost *.hs InteroReload
+" Automatically load opened file
+au BufWinEnter *.hs call InteroStartAndLoadFile()
+
+" Wait a bit to load a file if plugin has not started
+function! InteroStartAndLoadFile()
+  if g:intero_started
+    :InteroLoadCurrentFile
+  else
+    ":InteroStart "this happens automatically when file opened
+    call timer_start(1000, { tid -> execute('InteroLoadCurrentFile')})
+  endif
+endfunction
 
 " Lookup the type of expression under the cursor
 au FileType haskell nmap <silent> <leader>t <Plug>InteroGenericType
-au FileType haskell nmap <silent> <leader>T <Plug>InteroType
 " Insert type declaration
 au FileType haskell nnoremap <silent> <leader>ni :InteroTypeInsert<CR>
 " Show info about expression or type under the cursor
@@ -89,9 +102,6 @@ au FileType haskell nnoremap <leader>nt :InteroSetTargets<CR>
 
 " Run the spec in the current file 
 au FileType haskell nnoremap <silent> <leader>nb :InteroSend hspec spec<CR>
-
-" Intero starts automatically. Set this if you'd like to prevent that.
-let g:intero_start_immediately = 0
 
 " Ctrl-{hjkl} for navigating out of terminal panes
 tnoremap <C-h> <C-\><C-n><C-w>h
