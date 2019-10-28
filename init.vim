@@ -8,11 +8,13 @@ set smartcase
 set smarttab
 set smartindent
 set autoindent
-set expandtab
+set tabstop=2
 set shiftwidth=2
 set softtabstop=2
+set expandtab
 set background=dark
 set laststatus=0
+set encoding=utf-8
 
 colo darkblue
 hi Keyword ctermfg=darkcyan
@@ -20,6 +22,9 @@ hi Constant ctermfg=5*
 hi Comment ctermfg=2*
 hi Normal ctermbg=none
 hi LineNr ctermfg=darkgrey
+
+"Disable highlighted matching parens
+let g:loaded_matchparen=1
 
 execute pathogen#infect()
 
@@ -150,3 +155,12 @@ au FileType purescript nm <buffer> <silent> <leader>qa :PaddImportQualifications
 au FileType purescript nm <buffer> <silent> <leader>g :Pgoto<CR>
 au FileType purescript nm <buffer> <silent> <leader>p :Pursuit<CR>
 au FileType purescript nm <buffer> <silent> <leader>t :Ptype<CR>
+
+au BufNewFile,BufRead *.py
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix
+
