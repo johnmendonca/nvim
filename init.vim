@@ -26,6 +26,14 @@ hi LineNr ctermfg=darkgrey
 "Disable highlighted matching parens
 let g:loaded_matchparen=1
 
+inoremap <M-o> <Esc>o
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
+
+autocmd BufEnter *.html :setlocal filetype=eruby
+
 execute pathogen#infect()
 
 "Open NERDTree when nvim starts
@@ -37,6 +45,9 @@ map <C-n> :NERDTreeToggle<CR>
 
 "Show hidden files in NERDTree
 let NERDTreeShowHidden=1
+
+"Exclude gitignore items from CtrlP search
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 "Use Grepper
 nnoremap <leader>ga :Grepper<cr>
@@ -163,4 +174,6 @@ au BufNewFile,BufRead *.py
     \ set expandtab |
     \ set autoindent |
     \ set fileformat=unix
+
+let g:ragtag_global_maps = 1
 
