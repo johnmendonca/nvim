@@ -48,7 +48,7 @@
 	url = https://github.com/FrigoEU/psc-ide-vim.git
 [submodule "bundle/intero-neovim"]
 	path = bundle/intero-neovim
-	url = git@github.com:johnmendonca/intero-neovim.git
+	url = https://github.com/johnmendonca/intero-neovim.git
 [submodule "bundle/vim-ragtag"]
 	path = bundle/vim-ragtag
 	url = https://github.com/tpope/vim-ragtag.git
