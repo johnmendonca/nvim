@@ -139,7 +139,8 @@ let g:stylishask_on_save = 0
 au FileType haskell nnoremap <silent> <leader>ps :Stylishask<CR>
 
 " Supertab
-let g:SuperTabDefaultCompletionType = '<c-x><c-o>'
+"let g:SuperTabDefaultCompletionType = '<c-x><c-o>'
+let b:SuperTabDisabled = 1
 
 " Tabular
 nnoremap <leader>= :Tabularize /=<CR>
