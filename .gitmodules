@@ -61,3 +61,6 @@
 [submodule "bundle/emmet-vim"]
 	path = bundle/emmet-vim
 	url = https://github.com/mattn/emmet-vim.git
+[submodule "bundle/hoon.vim"]
+	path = bundle/hoon.vim
+	url = https://github.com/urbit/hoon.vim.git
