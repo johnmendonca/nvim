@@ -176,4 +176,5 @@ au BufNewFile,BufRead *.py
     \ set fileformat=unix
 
 let g:ragtag_global_maps = 1
+let g:user_emmet_leader_key='<C-F>'
 
