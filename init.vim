@@ -33,6 +33,7 @@ inoremap <C-k> <Up>
 inoremap <C-l> <Right>
 
 autocmd BufEnter *.html :setlocal filetype=eruby
+autocmd BufEnter *.vue  :setlocal filetype=html
 
 execute pathogen#infect()
 
