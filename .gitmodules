@@ -64,3 +64,15 @@
 [submodule "bundle/hoon.vim"]
 	path = bundle/hoon.vim
 	url = https://github.com/urbit/hoon.vim.git
+[submodule "bundle/typescript-vim"]
+	path = bundle/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim.git
+[submodule "bundle/vim-commentary"]
+	path = bundle/vim-commentary
+	url = https://github.com/tpope/vim-commentary.git
+[submodule "bundle/yajs.vim"]
+	path = bundle/yajs.vim
+	url = https://github.com/othree/yajs.vim.git
+[submodule "bundle/vim-jsx-pretty"]
+	path = bundle/vim-jsx-pretty
+	url = https://github.com/MaxMEllon/vim-jsx-pretty.git
