@@ -79,3 +79,6 @@
 [submodule "bundle/vim-styled-components"]
 	path = bundle/vim-styled-components
 	url = https://github.com/styled-components/vim-styled-components.git
+[submodule "bundle/vim-solidity"]
+	path = bundle/vim-solidity
+	url = https://github.com/TovarishFin/vim-solidity.git
