@@ -76,3 +76,6 @@
 [submodule "bundle/coc.nvim"]
 	path = bundle/coc.nvim
 	url = https://github.com/neoclide/coc.nvim.git
+[submodule "bundle/vim-styled-components"]
+	path = bundle/vim-styled-components
+	url = https://github.com/styled-components/vim-styled-components.git
