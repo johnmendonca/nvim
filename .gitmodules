@@ -82,3 +82,6 @@
 [submodule "bundle/vim-solidity"]
 	path = bundle/vim-solidity
 	url = https://github.com/TovarishFin/vim-solidity.git
+[submodule "bundle/vim-mdx-js"]
+	path = bundle/vim-mdx-js
+	url = https://github.com/jxnblk/vim-mdx-js.git
