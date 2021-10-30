@@ -143,7 +143,7 @@ au FileType haskell nnoremap <silent> <leader>ps :Stylishask<CR>
 
 " Supertab
 "let g:SuperTabDefaultCompletionType = '<c-x><c-o>'
-let b:SuperTabDisabled = 1
+" let b:SuperTabDisabled = 1
 
 " Tabular
 nnoremap <leader>= :Tabularize /=<CR>
@@ -326,3 +326,16 @@ let g:coc_snippet_prev = '<c-k>'
 imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 " Run :CocInstall https://github.com/dsznajder/vscode-es7-javascript-react-snippets
+
+" Toggle relative line numbers
+function! NumberToggle()
+    if(&nu == 1)
+        set nu!
+        set rnu
+    else
+        set nornu
+        set nu
+    endif
+endfunction
+
+nnoremap <C-g> :call NumberToggle()<CR>
